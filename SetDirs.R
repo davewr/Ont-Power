@@ -1,6 +1,6 @@
 myDrive <- "J:"
-myDir <- "/environment/Ont-Power"
-myPwd <- paste(drive, myDir, sep="")
+myDir <- "/Ont-Power"
+myPwd <- paste(myDrive, myDir, sep="")
 myPwd
 setwd(myPwd)
 getwd()
