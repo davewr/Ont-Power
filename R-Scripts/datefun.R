@@ -1,0 +1,15 @@
+library(lubridate)
+library(zoo)
+z <- zoo(1:1000, as.Date("1932-01-01") + 0:999)
+head(z)
+str(z)
+aggregate(z, yearmon, mean)
+
+library(lubridate)
+tt <- time(z)
+zz <- cbind(z, year = year(tt), month = month(tt), day = day(tt))
+head(zz)
+head(tt)
+str(tt)
+zz <-as.yearmon("2007-03-01")
+zz                
