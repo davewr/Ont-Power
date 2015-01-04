@@ -130,8 +130,12 @@ GetPower <- function() {
   
   final <- rbind(totalf,final1)
   
-  finala <- cbind(final, ym = (year(final$Date) + month(final$Date)/100 ),yw = (year(final$Date) + week(final$Date)/100 ) , year = year(final$Date), month = format(month(final$Date),digits=2),  day = day(final$Date), week = week(final$Date))
+  finala <- cbind(final, ym = (year(final$Date) + (month(final$Date)-1 )/ 12 ), yw = (year(final$Date) + (week(final$Date)-1)/52 ) , year = year(final$Date), month = format(month(final$Date),digits=2),  day = day(final$Date), week = week(final$Date))
+  final <- finala
   
-  return (list("final"=finala, "wind"=wind))
+  write.table(final, file = "data"+"final.csv", sep = ",", col.names=T, row.names=F)
+  write.table(wind, file = "data"+ "wind.csv", sep = ",", col.names=T, row.names=F)
+  
+  return (list("final"=final, "wind"=wind))
   
 }
