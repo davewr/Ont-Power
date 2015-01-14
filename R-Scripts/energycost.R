@@ -68,9 +68,9 @@ EnergyCost <- function(ec) {
   plot(ecah$ym, ecah$gensell, col="blue", axes=T, main="Ontario Energy Costs -- Sales vs Costs",xlab="Year+Month",ylab="","s",ylim=c(min(ecah$gensell/1000000),max(ecah$gensell)))
   
   #Right Margin Text
-  mtext("Generation Cost in $Millions ($80/MHh)",col="red", side=4,line=2.5, las=3)  
+  mtext("Generation Cost in $Millions at $80/MHh",col="red", side=4,line=2.5, las=3)  
   # Left Margin Text
-  mtext("Value in $Millions  based on $250/MWh",side=2,line=2, col="blue")  
+  mtext("Value in $Millions at $150/MWh",side=2,line=2, col="blue")  
   #box()
   # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   
